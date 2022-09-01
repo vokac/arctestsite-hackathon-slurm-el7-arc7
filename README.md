@@ -90,7 +90,7 @@ This should correspond to the latest version of the file here in Gitlab.
 Todo: expose the slurm config files
 
 
-# For developers of the test-site:
+# For developers of the test-site
 The webhook related code can be found at: https://source.coderefinery.org/nordugrid/arc-testsites
 
 #### Configuring of the cluster
