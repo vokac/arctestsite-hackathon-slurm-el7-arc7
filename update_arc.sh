@@ -1,4 +1,3 @@
-
 #!/bin/sh
 set -e
 os_v=el7
