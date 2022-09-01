@@ -32,21 +32,42 @@ You need to label your merge-requests according to what files you have changed. 
 Once the merge request has been accepted, you will see whether the replacement went ok or not by checking the labels on the original MR. If something went wrong, only Maiken can typically check the webhook to see what is wrong. 
 The replacement will fail for instance if the arc.conf validation failed e.g. if the arc.conf has some wrong entries or if something actually went wrong with the webhook service itself. 
 
-# How to test/use
+### How to test/use
 Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or slurmnodes.conf) in the following way 
 (assuming you know the git cli)
 
 - Clone the repo
 - Checkout a new branch 
 - Do the changes to the configuration files, push branch upstream
-- Create a merge request
+- Create a merge request following the url link from the push
 - Add one label per configuration file you changed. Pick from the pre-defined labels.  
+  - conf:arc 
+  - conf:slurm
+  - conf:slurmdbd
+  - conf:slurmnodes
 - Once the merge request is merged, the webhook will try to replace the configuration files.
 - You will see the result as new labels in the merge request
 - You can check the status of ARC following the url request mentioned above. 
 - To-do Add service to check the slurm status
 
-## What do the labels added by the system mean 
+
+### Git detailed example
+    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
+    cd arctestsite-hackathon-slurm-el7-arc7
+    git checkout -b mynewtestbranch
+
+Do changes in e.g. arc.conf
+
+    git add arc.conf
+    git commit -m "I did some changes in arc.conf for testing the procedure"
+    git push -u origin mynewtestbranch
+
+Then follow the instructions from the push command on how to create a merge request with the url provided. <br>
+Add appropriate labels.<br>
+Merge the merge-request, or ask someone with access to merge for you if you are not allowed.<br>
+Only once the merge-request is merged, will the configuration files be updated.
+
+### What do the labels added by the system mean 
 
 - fetch-conf:<conftype>:failure
   - If fetching the configuration from gitlab failed, then this label is added to the merge request by the webhook.
@@ -64,20 +85,6 @@ Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or sl
 
 
 
-## Git detailed example
-    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
-    cd arctestsite-hackathon-slurm-el7-arc7
-    git checkout -b mynewtestbranch
-
-Do changes in e.g. arc.conf
-
-    git add arc.conf
-    git commit -m "I did some changes in arc.conf for testing the procedure"
-    git push -u origin mynewtestbranch
-
-Then follow the instructions from the push command on how to create a merge request with the url provided. <br>
-Merge the merge-request, or ask someone with access to merge for you if you are not allowed.<br>
-Only once the merge-request is merged, will the configuration files be updated.
 
 
 
