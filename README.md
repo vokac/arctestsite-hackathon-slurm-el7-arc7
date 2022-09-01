@@ -13,36 +13,14 @@ This is a mini-cluster with 1 ARC-CE SLURM frontend, and with 1 compute node. Th
 # Interacting with the web services
 
 ## Read ARC conf file as currently  present on site
-This should correspond to the latest version of the file here in Gitlab. 
+View arc.conf via curl or web-broser with: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf)
 
-The actual ARC configuration file on the CE can be viewed from:
-
-[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf)
-
-The contents is collected via a webhook and a simple cat-ing of the arc.conf. 
 ## Read ARC log files
-
-The ARC log files are served for reading access. 
-
-ARC log files can be downloaded from:
-
-[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs)
-
-Note:  It is only reachable through a public IPv6, so if you are on IPv4 only you will not reach the site.
-
-Todo: Add labels that inform about success or failure of the webhook. 
-
-## Read Slurm config files
-This should correspond to the latest version of the file here in Gitlab. 
-
-Todo: expose the slurm config files
+Browse ARC log files via curl or web-browser with: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs)
 
 
 ## Check ARC state
-
-You can check the state of ARC from: 
-
-[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus)
+View ARC state via curl or web-browser with: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus)
 
 
 
@@ -104,6 +82,12 @@ Only once the merge-request is merged, will the configuration files be updated.
 
 
 
+
+
+## Read Slurm config files
+This should correspond to the latest version of the file here in Gitlab. 
+
+Todo: expose the slurm config files
 
 
 # For developers of the test-site:
