@@ -32,14 +32,18 @@ You need to label your merge-requests according to what files you have changed. 
 ## Read ARC conf file as currently  present on site
 This should correspond to the latest version of the file here in Gitlab. 
 
-The actual ARC configuration file on the CE can be viewed from: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf)
+The actual ARC configuration file on the CE can be viewed from:
+
+[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcconf)
 
 The contents is collected via a webhook and a simple cat-ing of the arc.conf. 
 ## Read ARC log files
 
 The ARC log files are served for reading access. 
 
-ARC log files can be downloaded from: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs)
+ARC log files can be downloaded from:
+
+[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arclogs)
 
 Note:  It is only reachable through a public IPv6, so if you are on IPv4 only you will not reach the site.
 
@@ -53,7 +57,9 @@ Todo: expose the slurm config files
 
 ## Check ARC state
 
-You can check the state of ARC from: [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus)
+You can check the state of ARC from: 
+
+[http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus)
 
 
 # How to test/use
