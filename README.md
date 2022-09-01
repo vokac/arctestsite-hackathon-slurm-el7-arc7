@@ -12,16 +12,6 @@ This is a mini-cluster with 1 ARC-CE SLURM frontend, and with 1 compute node. Th
 
 # Interacting with the web services
 
-
-## Replacing arc.conf or slurm configuration via webhook 
-
-Whenever the arc.conf or the slurm config files in the main branch changes via a merge request, the new arc.conf/slurm config files are pulled onto arctestcluster-slurm-ce1, and replaced with the old ones. ARC/slurm is restarted with the new configuration. 
-
-You need to label your merge-requests according to what files you have changed. Only the files corresponding to the labels chosen will be updated upon the merge. 
-
-Once the merge request has been accepted, you will see whether the replacement went ok or not by checking the labels on the original MR. If something went wrong, only Maiken can typically check the webhook to see what is wrong. 
-The replacement will fail for instance if the arc.conf validation failed e.g. if the arc.conf has some wrong entries or if something actually went wrong with the webhook service itself. 
-
 ## Read ARC conf file as currently  present on site
 This should correspond to the latest version of the file here in Gitlab. 
 
@@ -54,6 +44,16 @@ You can check the state of ARC from:
 
 [http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus](http://arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no/arcstatus)
 
+
+
+## Replacing arc.conf or slurm configuration via webhook 
+
+Whenever the arc.conf or the slurm config files in the main branch changes via a merge request, the new arc.conf/slurm config files are pulled onto arctestcluster-slurm-ce1, and replaced with the old ones. ARC/slurm is restarted with the new configuration. 
+
+You need to label your merge-requests according to what files you have changed. Only the files corresponding to the labels chosen will be updated upon the merge. 
+
+Once the merge request has been accepted, you will see whether the replacement went ok or not by checking the labels on the original MR. If something went wrong, only Maiken can typically check the webhook to see what is wrong. 
+The replacement will fail for instance if the arc.conf validation failed e.g. if the arc.conf has some wrong entries or if something actually went wrong with the webhook service itself. 
 
 # How to test/use
 Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or slurmnodes.conf) in the following way 
@@ -101,6 +101,9 @@ Do changes in e.g. arc.conf
 Then follow the instructions from the push command on how to create a merge request with the url provided. <br>
 Merge the merge-request, or ask someone with access to merge for you if you are not allowed.<br>
 Only once the merge-request is merged, will the configuration files be updated.
+
+
+
 
 
 # For developers of the test-site:
