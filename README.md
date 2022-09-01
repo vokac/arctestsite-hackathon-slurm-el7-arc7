@@ -9,25 +9,18 @@ This is a mini-cluster with 1 ARC-CE SLURM frontend, and with 1 compute node. Th
 [[_TOC_]] 
 
 
-# Slurm configuration
-The frontend exports its /etc/slurm folder to the compute-node. 
 
-The slurm configuration files are:
-
- - slurm.conf
- - slurmdbd.conf
- - slurmnodes.conf
+# Interacting with the web services
 
 
-# Web services
+## Replacing arc.conf or slurm configuration via webhook 
 
-
-## Webhook 
-
-Whenever the arc.conf or the slurm config files in master changes via a merge request, the new arc.conf/slurm config files are pulled onto arctestcluster-slurm-ce1, and replaced with the old ones. ARC/slurm is restarted with the new configuration. 
+Whenever the arc.conf or the slurm config files in the main branch changes via a merge request, the new arc.conf/slurm config files are pulled onto arctestcluster-slurm-ce1, and replaced with the old ones. ARC/slurm is restarted with the new configuration. 
 
 You need to label your merge-requests according to what files you have changed. Only the files corresponding to the labels chosen will be updated upon the merge. 
 
+Once the merge request has been accepted, you will see whether the replacement went ok or not by checking the labels on the original MR. If something went wrong, only Maiken can typically check the webhook to see what is wrong. 
+The replacement will fail for instance if the arc.conf validation failed e.g. if the arc.conf has some wrong entries or if something actually went wrong with the webhook service itself. 
 
 ## Read ARC conf file as currently  present on site
 This should correspond to the latest version of the file here in Gitlab. 
@@ -110,9 +103,20 @@ Merge the merge-request, or ask someone with access to merge for you if you are 
 Only once the merge-request is merged, will the configuration files be updated.
 
 
-## For developers of the test-site:
+# For developers of the test-site:
 The webhook related code can be found at: https://source.coderefinery.org/nordugrid/arc-testsites
 
 #### Configuring of the cluster
 The ansible playbook used to configure the cluster is found in [configure_slurm_arctestcluster.yml](https://source.coderefinery.org/maikenp/sysadmin/-/blob/master/configure/configure_slurm_arctestcluster.yml). In that repo you will also find the ansible roles that are used. 
+
+### Slurm configuration
+The frontend exports its /etc/slurm folder to the compute-node. 
+
+The slurm configuration files are:
+
+ - slurm.conf
+ - slurmdbd.conf
+ - slurmnodes.conf
+
+
 
