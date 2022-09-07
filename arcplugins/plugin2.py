@@ -1,1 +1,1 @@
-Some new plugin 2 - attempt2
+Some new plugin 2 - test3
