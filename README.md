@@ -1,4 +1,4 @@
-test for mirror4
+test for mirror5
 # ARC 7 slurm el7 test-site
 This repository holds the arc.conf file and other relevant configuration files for the ARC SLURM test-site with frontend: arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no
 
