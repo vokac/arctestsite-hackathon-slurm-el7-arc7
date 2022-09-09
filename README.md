@@ -53,18 +53,28 @@ Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or sl
 
 
 ### Git detailed example
+
+Depending on if you are accessing this page from GitLab (A) or the Github mirror site (B), you do: 
+
+A) Gitlab:
     git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
+
+    
+B) GitHub mirror site:
+    git clone https://github.com/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
+
+    
+Then for either option, continue with: 
     cd arctestsite-hackathon-slurm-el7-arc7
     git checkout -b mynewtestbranch
 
-Do changes in e.g. arc.conf
-
+Do changes in e.g. arc.conf, then: 
     git add arc.conf
     git commit -m "I did some changes in arc.conf for testing the procedure"
     git push -u origin mynewtestbranch
 
 Then follow the instructions from the push command on how to create a merge request with the url provided. <br>
-Add appropriate labels.<br>
+Add appropriate labels (see instructions above).<br>
 Merge the merge-request, or ask someone with access to merge for you if you are not allowed.<br>
 Only once the merge-request is merged, will the configuration files be updated.
 
