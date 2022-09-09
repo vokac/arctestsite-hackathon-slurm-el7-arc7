@@ -58,12 +58,12 @@ Depending on if you are accessing this page from GitLab (A) or the Github mirror
 
 A) Gitlab:
     
-    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git```
+    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
 
     
 B) GitHub mirror site:
     
-    git clone https://github.com/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git````
+    git clone https://github.com/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
 
     
 Then for either option, continue with: 
