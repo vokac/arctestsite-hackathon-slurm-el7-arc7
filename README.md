@@ -72,6 +72,7 @@ Then for either option, continue with:
     git checkout -b mynewtestbranch
 
 Do changes in e.g. arc.conf, then: 
+
     git add arc.conf
     git commit -m "I did some changes in arc.conf for testing the procedure"
     git push -u origin mynewtestbranch
