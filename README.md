@@ -57,14 +57,17 @@ Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or sl
 Depending on if you are accessing this page from GitLab (A) or the Github mirror site (B), you do: 
 
 A) Gitlab:
-    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
+    
+    git clone https://source.coderefinery.org/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git```
 
     
 B) GitHub mirror site:
-    git clone https://github.com/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git
+    
+    git clone https://github.com/nordugrid/arctestsite-hackathon-slurm-el7-arc7.git````
 
     
 Then for either option, continue with: 
+  
     cd arctestsite-hackathon-slurm-el7-arc7
     git checkout -b mynewtestbranch
 
