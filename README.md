@@ -102,30 +102,6 @@ The replacement will fail for instance if the arc.conf validation failed e.g. if
 
 
 
-### Git detailed example for changing configuration files or installing a plugin
-
-Depending on if you are accessing this page from GitLab (A) or the Github mirror site (B), you do: 
-
-First clone the repo. 
-
-    
-Then continue with: 
-  
-    cd arctestsite-hackathon-slurm-el7-arc7
-    git checkout -b >mynewtestbranch>
-
-Do changes in e.g. arc.conf, or create a new plugin in the arcplugins dir, then: 
-
-    git add -u 
-    git commit -m "My very explanatory message"
-    git push -u origin <mynewtestbranch>
-
-Then follow the instructions from the push command on how to create a merge request with the url provided. <br>
-Add appropriate labels (see instructions above).<br>
-Merge the merge-request, or ask someone with access to merge for you if you are not allowed.<br>
-Only once the merge-request is merged, will the configuration files be updated.
-
-
 ## Install an auth plugin or mapping plugin
 To install a new auth plugin on the server, two steps are needed
 1. Create the auth plugin script in ./arcplugins folder in git
