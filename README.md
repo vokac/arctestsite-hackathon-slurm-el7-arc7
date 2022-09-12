@@ -46,7 +46,7 @@ Change the arc.conf or slurm configuration files (slurm.conf slurmdbd.conf or sl
   - conf:slurm
   - conf:slurmdbd
   - conf:slurmnodes
-  - arc:plugin
+  - arc:install_plugin
 - Once the merge request is merged, the webhook will try to replace the configuration files.
 - You will see the result as new labels in the merge request
 - You can check the status of ARC following the url requests mentioned above. 
