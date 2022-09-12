@@ -128,7 +128,7 @@ Assuming you have cloned the repo, and created your dev-branch
 
 
 
-### What do the labels added by the system mean 
+## What do the labels added by the system mean 
 
 - fetch-conf:<conftype>:failure
   - If fetching the configuration from gitlab failed, then this label is added to the merge request by the webhook.
