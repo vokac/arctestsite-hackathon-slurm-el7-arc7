@@ -147,27 +147,3 @@ Assuming you have cloned the repo, and created your dev-branch
 
 
 
-
-## Read Slurm config files
-This should correspond to the latest version of the file here in Gitlab. 
-
-Todo: expose the slurm config files
-
-
-# For developers of the test-site
-The webhook related code can be found at: https://source.coderefinery.org/nordugrid/arc-testsites
-
-#### Configuring of the cluster
-The ansible playbook used to configure the cluster is found in [configure_slurm_arctestcluster.yml](https://source.coderefinery.org/maikenp/sysadmin/-/blob/master/configure/configure_slurm_arctestcluster.yml). In that repo you will also find the ansible roles that are used. 
-
-### Slurm configuration
-The frontend exports its /etc/slurm folder to the compute-node. 
-
-The slurm configuration files are:
-
- - slurm.conf
- - slurmdbd.conf
- - slurmnodes.conf
-
-
-
