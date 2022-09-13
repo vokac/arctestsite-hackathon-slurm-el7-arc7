@@ -1,5 +1,6 @@
 # ARC 7 slurm el7 test-site
-This repository holds the arc.conf and slurm configuration files for the ARC SLURM test-site. The endpoint fqdn is: arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no
+This repository holds the arc.conf and slurm configuration files for the ARC SLURM test-site. 
+The endpoint fqdn is: **arctestcluster-hackathon-slurm-el7-ce1.cern-test.uiocloud.no**
 
 This is a mini-cluster with 1 ARC-CE SLURM frontend, and with 1 compute node. 
 
